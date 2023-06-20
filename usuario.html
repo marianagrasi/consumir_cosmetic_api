@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://kit.fontawesome.com/5f0060c70f.js" crossorigin="anonymous"></script>
+  <title>Usuarios | Inicio</title>
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+ 
+</head>
+<body onload="listarDatos()" class="hold-transition sidebar-mini layout-fixed" >
+<div class="wrapper">
+     <!-- barra naveg-->
+     <nav class="navbar navbar-dark bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">COSMETIC</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="cliente.html">Clientes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="devolucion.html">Devoluciones</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="usuario.html">Usuarios</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  
+      <!-- termina aca barra naveg-->
+
+    <div class="col-lg-12 card-header">
+        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal5">
+          Agregar Usuario
+        </button>
+      </div>
+
+
+<table id="tablaUsuarios"  class="table-responsive table-bordered table-striped ">
+                  <thead>
+                    <tr>
+                      <th>Nombre </th>
+                      <th>Correo</th>
+                      <th>Password</th>
+                      <th>Rol</th>
+                      <th>Estado</th>                      
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody id="contenido">
+                    
+                  </tbody>
+                  <tfoot>
+                    
+                  </tfoot>
+</table>
+             
+          
+  <!-- Modal Crear-->
+  <div class="modal " id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel5" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel5">Crear Usuario</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="card-body">
+                <form action="">
+                    <div class="row ">
+                      <div class="col-md-6">
+                        <label for="">Nombre</label><br>
+                        <input type="text" class="form-control col-sm-12" id="nombre" placeholder="" >
+                        <div id="errornombre"></div><br>
+                      </div>  
+                      <div class="col-md-6">
+                        <label for="">Correo</label><br>
+                        <input type="email" class="form-control col-sm-12" id="correo" placeholder="">
+                        <div id="errorcorreo"></div><br>
+                      </div>
+                    </div>
+    
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label for="">Password</label><br>
+                        <input type="text" class="form-control col-sm-12" id="password" placeholder="" >
+                        <div id="errorpassword"></div><br>
+                      </div>
+
+                    <div class="row">
+                        <div class="input-field col s6">
+                        <select class="browser-default" id="rol">
+                          <option value="" disabled selected>Rol</option>
+                          <option value="Administrador">Administrador</option>
+                          <option value="Vendedor">Vendedor</option>
+                        </select>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s6">
+                        <select class="browser-default" id="estado">
+                          <option value="" disabled selected>Estado</option>
+                          <option value="true">Activo</option>
+                          <option value="false">Inactivo</option>
+                        </select>
+                        </div>
+                      </div>
+
+                    </div>
+                </form>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  <button id="btnRegistrar" type="button" class="btn btn-primary">Guardar</button>
+                </div>
+              </div> 
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+       <!-- Modal Editar-->
+    <div class="modal " id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel6" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel6">Editar Usuario</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body"> 
+              <div class="card-body">
+                <form action="">
+                    <div class="row ">
+                      <div class="col-md-6">
+                        <label for="">Nombre</label><br>
+                        <input type="text" class="form-control col-sm-12" id="nombre1" placeholder="" >
+                        <div id="errornombre1"></div><br>
+                      </div>  
+                      <div class="col-md-6">
+                        <label for="">Correo</label><br>
+                        <input type="email" class="form-control col-sm-12" id="correo1" placeholder="">
+                        <div id="errorcorreo1"></div><br>
+                      </div>
+                    </div>
+    
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label for="">Password</label><br>
+                        <input type="text" class="form-control col-sm-12" id="password1" placeholder="" >
+                        <div id="errorpassword1"></div><br>
+                      </div>
+                      
+                    <div class="row">
+                      <div class="input-field col s6">
+                      <select class="browser-default" id="rol1">
+                        <option value="" disabled selected>Rol</option>
+                        <option value="Administrador">Administrador</option>
+                        <option value="Vendedor">Vendedor</option>
+                      </select>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="input-field col s6">
+                      <select class="browser-default" id="estado1">
+                        <option value="" disabled selected>Estado</option>
+                        <option value="true">Activo</option>
+                        <option value="false">Inactivo</option>
+                      </select>
+                      </div>
+                      </div>
+                      
+                    
+                </form>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                  <button id="btnActualizar" type="button" class="btn btn-primary">Guardar</button>
+                </div>
+      
+              </div> 
+            </div>
+            
+          </div>
+        </div>
+    </div>
+
+  
+  
+ 
+</div>
+ <!-- Footer -->
+ <footer class="text-center text-white fixed-bottom" style="background-color: blue;">
+  <!-- Grid container -->
+  <div class="container p-4"></div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: blue;">
+    © 2023 Copyright:
+    <a class="text-white" href="https://marianasierra.co/">marianasierra.co</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/moment/moment.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script src="../js/usuario.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html> 
