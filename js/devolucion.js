@@ -61,7 +61,7 @@ const registrarDevo = async() =>{
         .then(json => {
             Swal.fire({
                 icon: 'success',
-                title: 'La devolucion ha sido creada exitosamente',
+                title: 'La devolución ha sido creada exitosamente',
                 showConfirmButton: false,
                 timer: 1500
               });
