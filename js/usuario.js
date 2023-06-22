@@ -98,11 +98,11 @@ const validarcorreo = () => {
   
     if (!correo) {
       
-        texto = '<span style="color: #fff; background-color: #e6213f; padding: 3px;border-radius: 3px;">El correo no puede estar vacio</span>';
+        texto = '<span style="color: #e6213f; padding: 3px;border-radius: 3px;">El correo no puede estar vacio</span>';
         document.getElementById('errorcorreo').innerHTML = texto;
         return false;
     } else if (!expresion.test(correo)) {
-        texto = '<span style="color: #fff; background-color: #e6213f; padding: 3px;border-radius: 3px;">La dirección de correo debe ser válida</span>';
+        texto = '<span style="color: #e6213f; padding: 3px;border-radius: 3px;">La dirección de correo debe ser válida</span>';
         document.getElementById('errorcorreo').innerHTML = texto;
         return false;
     }else {
@@ -197,11 +197,11 @@ const validarcorreo1 = () => {
   
     if (!correo) {
       
-        texto = '<span style="color: #fff; background-color: #e6213f; padding: 3px;border-radius: 3px;">El correo no puede estar vacio</span>';
+        texto = '<span style="color: #e6213f; padding: 3px;border-radius: 3px;">El correo no puede estar vacio</span>';
         document.getElementById('errorcorreo1').innerHTML = texto;
         return false;
     } else if (!expresion.test(correo)) {
-        texto = '<span style="color: #fff; background-color: #e6213f; padding: 3px;border-radius: 3px;">La dirección de correo debe ser válida</span>';
+        texto = '<span style="color: #e6213f; padding: 3px;border-radius: 3px;">La dirección de correo debe ser válida</span>';
         document.getElementById('errorcorreo1').innerHTML = texto;
         return false;
     }else {

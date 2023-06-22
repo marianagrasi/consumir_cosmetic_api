@@ -79,19 +79,19 @@ const validarid_detalle_venta = () => {
   let expresion = /[0-9]/;
 
   if (id_detalle_venta === null || id_detalle_venta === '' || id_detalle_venta.length === 0) {
-    texto = '<span style="color: #fff; background-color: #e6213f; padding: 3px;border-radius: 3px;">El detalle de venta no puede estar vacio</span>';
+    texto = '<span style="color: #e6213f; padding: 3px;border-radius: 3px;">El detalle de venta no puede estar vacio</span>';
     document.getElementById('errordetalle_venta').innerHTML = texto;
     return false;
   } else if (!expresion.test(id_detalle_venta)) {
-    texto = '<span style="color: #fff; background-color: #e6213f; padding: 3px;border-radius: 3px;">Ingrese solo caracteres válidos (números)</span>';
+    texto = '<span style="color: #e6213f; padding: 3px;border-radius: 3px;"">Ingrese solo caracteres válidos (números)</span>';
     document.getElementById('errordetalle_venta').innerHTML = texto;
     return false;
   } else if (id_detalle_venta.length < 2) {
-    texto = '<span style="color: #fff; background-color: #e6213f; padding: 3px;border-radius: 3px;">Debe ser mayor a 2 caracteres</span>';
+    texto = '<span style="color: #e6213f; padding: 3px;border-radius: 3px;"">Debe ser mayor a 2 caracteres</span>';
     document.getElementById('errordetalle_venta').innerHTML = texto;
     return false;
   } else if (id_detalle_venta.length > 10) {
-    texto = '<span style="color: #fff; background-color: #e6213f; padding: 3px;border-radius: 3px;">Debe ser menor a 10 caracteres</span>';
+    texto = '<span style="color: #e6213f; padding: 3px;border-radius: 3px;"">Debe ser menor a 10 caracteres</span>';
     document.getElementById('errordetalle_venta').innerHTML = texto;
     return false;
   
@@ -110,19 +110,19 @@ const validarid_producto = () => {
     let expresion = /[0-9]/;
   
     if (id_producto === null || id_producto === '' || id_producto.length === 0) {
-      texto = '<span style="color: #fff; background-color: #e6213f; padding: 3px;border-radius: 3px;">El id producto no puede estar vacio</span>';
+      texto = '<span style="color: #e6213f; padding: 3px;border-radius: 3px;"">El id producto no puede estar vacio</span>';
       document.getElementById('errorid_producto').innerHTML = texto;
       return false;
     } else if (!expresion.test(id_producto)) {
-      texto = '<span style="color: #fff; background-color: #e6213f; padding: 3px;border-radius: 3px;">Ingrese solo caracteres válidos (números)</span>';
+      texto = '<span style="color: #e6213f; padding: 3px;border-radius: 3px;">Ingrese solo caracteres válidos (números)</span>';
       document.getElementById('errorid_producto').innerHTML = texto;
       return false;
     } else if (id_producto.length < 2) {
-      texto = '<span style="color: #fff; background-color: #e6213f; padding: 3px;border-radius: 3px;">Debe ser mayor a 2 caracteres</span>';
+      texto = '<span style="color: #e6213f; padding: 3px;border-radius: 3px;">Debe ser mayor a 2 caracteres</span>';
       document.getElementById('errorid_producto').innerHTML = texto;
       return false;
     } else if (id_producto.length > 10) {
-      texto = '<span style="color: #fff; background-color: #e6213f; padding: 3px;border-radius: 3px;">Debe ser menor a 10 caracteres</span>';
+      texto = '<span style="color: #e6213f; padding: 3px;border-radius: 3px;">Debe ser menor a 10 caracteres</span>';
       document.getElementById('errorid_producto').innerHTML = texto;
       return false;
     
@@ -140,19 +140,19 @@ const validarcantidad_devuelta = () => {
     let expresion = /[0-9]/;
   
     if (cantidad_devuelta === null ||cantidad_devuelta === '' ||cantidad_devuelta === 0) {
-      texto = '<span style="color: #fff; background-color: #e6213f; padding: 3px;border-radius: 3px;">La cantidad no puede estar vacia</span>';
+      texto = '<span style="color: #e6213f; padding: 3px;border-radius: 3px;">La cantidad no puede estar vacia</span>';
       document.getElementById('errorcantidad_devuelta').innerHTML = texto;
       return false;
     } else if (!expresion.test(cantidad_devuelta)) {
-      texto = '<span style="color: #fff; background-color: #e6213f; padding: 3px;border-radius: 3px;">Ingrese solo caracteres válidos (números)</span>';
+      texto = '<span style="color: #e6213f; padding: 3px;border-radius: 3px;">Ingrese solo caracteres válidos (números)</span>';
       document.getElementById('errorcantidad_devuelta').innerHTML = texto;
       return false;
     } else if (cantidad_devuelta.length < 0) {
-      texto = '<span style="color: #fff; background-color: #e6213f; padding: 3px;border-radius: 3px;">Debe ser mayor a 2 caracteres</span>';
+      texto = '<span style="color: #e6213f; padding: 3px;border-radius: 3px;"">Debe ser mayor a 2 caracteres</span>';
       document.getElementById('errorcantidad_devuelta').innerHTML = texto;
       return false;
     } else if (cantidad_devuelta.length > 100) {
-      texto = '<span style="color: #fff; background-color: #e6213f; padding: 3px;border-radius: 3px;">Debe ser menor a 10 caracteres</span>';
+      texto = '<span style="color: #e6213f; padding: 3px;border-radius: 3px;"">Debe ser menor a 10 caracteres</span>';
       document.getElementById('errorcantidad_devuelta').innerHTML = texto;
       return false;
     
@@ -214,7 +214,7 @@ validarmotivo_devolucion = () => {
         .then(json => {
             Swal.fire({
                 icon: 'info',
-                title: 'La devolucion ha sido modificada exitosamente',
+                title: 'La devolución ha sido modificada exitosamente',
                 showConfirmButton: false,
                 timer: 1500
               });
@@ -231,19 +231,19 @@ const validarid_detalle_venta1 = () => {
   let expresion = /[0-9]/;
 
   if (id_detalle_venta === null || id_detalle_venta === '' || id_detalle_venta.length === 0) {
-    texto = '<span style="color: #fff; background-color: #e6213f; padding: 3px;border-radius: 3px;">El detalle de venta no puede estar vacio</span>';
+    texto = '<span style="color: #e6213f; padding: 3px;border-radius: 3px;">El detalle de venta no puede estar vacio</span>';
     document.getElementById('errordetalle_venta1').innerHTML = texto;
     return false;
   } else if (!expresion.test(id_detalle_venta)) {
-    texto = '<span style="color: #fff; background-color: #e6213f; padding: 3px;border-radius: 3px;">Ingrese solo caracteres válidos (números)</span>';
+    texto = '<span style="color: #e6213f; padding: 3px;border-radius: 3px;">Ingrese solo caracteres válidos (números)</span>';
     document.getElementById('errordetalle_venta1').innerHTML = texto;
     return false;
   } else if (id_detalle_venta.length < 2) {
-    texto = '<span style="color: #fff; background-color: #e6213f; padding: 3px;border-radius: 3px;">Debe ser mayor a 2 caracteres</span>';
+    texto = '<span style="color: #e6213f; padding: 3px;border-radius: 3px;">Debe ser mayor a 2 caracteres</span>';
     document.getElementById('errordetalle_venta1').innerHTML = texto;
     return false;
   } else if (id_detalle_venta.length > 10) {
-    texto = '<span style="color: #fff; background-color: #e6213f; padding: 3px;border-radius: 3px;">Debe ser menor a 10 caracteres</span>';
+    texto = '<span style="color: #e6213f; padding: 3px;border-radius: 3px;">Debe ser menor a 10 caracteres</span>';
     document.getElementById('errordetalle_venta1').innerHTML = texto;
     return false;
   
@@ -262,19 +262,19 @@ const validarid_producto1 = () => {
     let expresion = /[0-9]/;
   
     if (id_producto === null || id_producto === '' || id_producto.length === 0) {
-      texto = '<span style="color: #fff; background-color: #e6213f; padding: 3px;border-radius: 3px;">El id producto no puede estar vacio</span>';
+      texto = '<span style="color: #e6213f; padding: 3px;border-radius: 3px;">El id producto no puede estar vacio</span>';
       document.getElementById('errorid_producto1').innerHTML = texto;
       return false;
     } else if (!expresion.test(id_producto)) {
-      texto = '<span style="color: #fff; background-color: #e6213f; padding: 3px;border-radius: 3px;">Ingrese solo caracteres válidos (números)</span>';
+      texto = '<span style="color: #e6213f; padding: 3px;border-radius: 3px;">Ingrese solo caracteres válidos (números)</span>';
       document.getElementById('errorid_producto1').innerHTML = texto;
       return false;
     } else if (id_producto.length < 2) {
-      texto = '<span style="color: #fff; background-color: #e6213f; padding: 3px;border-radius: 3px;">Debe ser mayor a 2 caracteres</span>';
+      texto = '<span style="color: #e6213f; padding: 3px;border-radius: 3px;">Debe ser mayor a 2 caracteres</span>';
       document.getElementById('errorid_producto1').innerHTML = texto;
       return false;
     } else if (id_producto.length > 10) {
-      texto = '<span style="color: #fff; background-color: #e6213f; padding: 3px;border-radius: 3px;">Debe ser menor a 10 caracteres</span>';
+      texto = '<span style="color: #e6213f; padding: 3px;border-radius: 3px;">Debe ser menor a 10 caracteres</span>';
       document.getElementById('errorid_producto1').innerHTML = texto;
       return false;
     
@@ -299,7 +299,7 @@ validarmotivo_devolucion1 = () => {
     
   
     if ( motivo_devolucion === null ||  motivo_devolucion === '' ||  motivo_devolucion.length === 0) {
-      texto = '<span style="color: #e6213f; padding: 3px;border-radius: 3px;">Ingrese el motivo de la devolucion</span>';
+      texto = '<span style="color: #e6213f; padding: 3px;border-radius: 3px;">Ingrese el motivo de la devolución</span>';
       document.getElementById('errormotivo_devolucion1').innerHTML = texto;
       return false;
     } else {
@@ -314,19 +314,19 @@ const validarcantidad_devuelta1 = () => {
   let expresion = /[0-9]/;
 
   if (cantidad_devuelta === null ||cantidad_devuelta === '' ||cantidad_devuelta === 0) {
-    texto = '<span style="color: #fff; background-color: #e6213f; padding: 3px;border-radius: 3px;">La cantidad no puede estar vacia</span>';
+    texto = '<span style="color: #e6213f; padding: 3px;border-radius: 3px;">La cantidad no puede estar vacia</span>';
     document.getElementById('errorcantidad_devuelta1').innerHTML = texto;
     return false;
   } else if (!expresion.test(cantidad_devuelta)) {
-    texto = '<span style="color: #fff; background-color: #e6213f; padding: 3px;border-radius: 3px;">Ingrese solo caracteres válidos (números)</span>';
+    texto = '<span style="color: #e6213f; padding: 3px;border-radius: 3px;"">Ingrese solo caracteres válidos (números)</span>';
     document.getElementById('errorcantidad_devuelta1').innerHTML = texto;
     return false;
   } else if (cantidad_devuelta < 0) {
-    texto = '<span style="color: #fff; background-color: #e6213f; padding: 3px;border-radius: 3px;">Debe ser mayor a 2 caracteres</span>';
+    texto = '<span style="color: #e6213f; padding: 3px;border-radius: 3px;"">Debe ser mayor a 2 caracteres</span>';
     document.getElementById('errorcantidad_devuelta1').innerHTML = texto;
     return false;
   } else if (cantidad_devuelta > 100) {
-    texto = '<span style="color: #fff; background-color: #e6213f; padding: 3px;border-radius: 3px;">Debe ser menor a 100 caracteres</span>';
+    texto = '<span style="color: #e6213f; padding: 3px;border-radius: 3px;"">Debe ser menor a 100 caracteres</span>';
     document.getElementById('errorcantidad_devuelta1').innerHTML = texto;
     return false;
   
@@ -377,7 +377,7 @@ const validarcantidad_devuelta1 = () => {
             }).then(() =>{
                 Swal.fire(
                     'Eliminada!',
-                    'La devolucion ha sido eliminada.',
+                    'La devolución ha sido eliminada.',
                     'success',
                     );
                 setTimeout(() =>{

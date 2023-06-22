@@ -88,19 +88,19 @@ const validarCedula = () => {
   let expresion = /[0-9]/;
 
   if (cedula === null || cedula === '' || cedula.length === 0) {
-    texto = '<span style="color: #fff; background-color: #e6213f; padding: 3px;border-radius: 3px;">La cédula no puede estar vacia</span>';
+    texto = '<span style="color: #e6213f; padding: 3px;border-radius: 3px;">La cédula no puede estar vacia</span>';
     document.getElementById('errornit_cedula').innerHTML = texto;
     return false;
   } else if (!expresion.test(cedula)) {
-    texto = '<span style="color: #fff; background-color: #e6213f; padding: 3px;border-radius: 3px;">Ingrese solo caracteres válidos (números)</span>';
+    texto = '<span style="color: #e6213f; padding: 3px;border-radius: 3px;">Ingrese solo caracteres válidos (números)</span>';
     document.getElementById('errornit_cedula').innerHTML = texto;
     return false;
   } else if (cedula.length < 3) {
-    texto = '<span style="color: #fff; background-color: #e6213f; padding: 3px;border-radius: 3px;">Debe ser mayor a 3 caracteres</span>';
+    texto = '<span style="color: #e6213f; padding: 3px;border-radius: 3px;">Debe ser mayor a 3 caracteres</span>';
     document.getElementById('errornit_cedula').innerHTML = texto;
     return false;
   } else if (cedula.length > 10) {
-    texto = '<span style="color: #fff; background-color: #e6213f; padding: 3px;border-radius: 3px;">Debe ser menor a 10 caracteres</span>';
+    texto = '<span style="color: #e6213f; padding: 3px;border-radius: 3px;">Debe ser menor a 10 caracteres</span>';
     document.getElementById('errornit_cedula').innerHTML = texto;
     return false;
   
@@ -178,11 +178,11 @@ const validarCorreo = () => {
 
   if (!correo) {
     
-      texto = '<span style="color: #fff; background-color: #e6213f; padding: 3px;border-radius: 3px;">El correo no puede estar vacio</span>';
+      texto = '<span style="color: #e6213f; padding: 3px;border-radius: 3px;">El correo no puede estar vacio</span>';
       document.getElementById('errorcorreo').innerHTML = texto;
       return false;
   } else if (!expresion.test(correo)) {
-      texto = '<span style="color: #fff; background-color: #e6213f; padding: 3px;border-radius: 3px;">La dirección de correo debe ser válida</span>';
+      texto = '<span style="color: #e6213f; padding: 3px;border-radius: 3px;">La dirección de correo debe ser válida</span>';
       document.getElementById('errorcorreo').innerHTML = texto;
       return false;
   }else {
@@ -199,15 +199,15 @@ const validarTelefono = () => {
   let expresion = /^[0-9]+$/;
 
   if (!telefono) {
-      texto = '<span style="color: #fff; background-color: #e6213f; padding: 3px;border-radius: 3px;">El telefono no puede estar vacio</span>';
+      texto = '<span style="color: #e6213f; padding: 3px;border-radius: 3px;">El teléfono no puede estar vacio</span>';
       document.getElementById('errortelefono').innerHTML = texto;
       return false;
   } else if (telefono.length < 10) {
-      texto = '<span style="color: #fff; background-color: #e6213f; padding: 3px;border-radius: 3px;">El numero debe tener mas de 9 digitos</span>';
+      texto = '<span style="color: #e6213f; padding: 3px;border-radius: 3px;>El número debe tener mas de 9 digitos</span>';
       document.getElementById('errortelefono').innerHTML = texto;
       return false;
   } else if (!expresion.test(telefono)) {
-      texto = '<span style="color: #fff; background-color: #e6213f; padding: 3px;border-radius: 3px;">Solo se admiten números</span>';
+      texto = '<span style="color: #e6213f; padding: 3px;border-radius: 3px;">Solo se admiten números</span>';
       document.getElementById('errortelefono').innerHTML = texto;
       return false;
   }else{
@@ -282,19 +282,19 @@ const validarCedula1 = () => {
   let expresion = /[0-9]/;
 
   if (cedula === null || cedula === '' || cedula.length === 0) {
-    texto = '<span style="color: #fff; background-color: #e6213f; padding: 3px;border-radius: 3px;">La cédula no puede estar vacia</span>';
+    texto = '<span style="color: #e6213f; padding: 3px;border-radius: 3px;>La cédula no puede estar vacia</span>';
     document.getElementById('errornit_cedula1').innerHTML = texto;
     return false;
   } else if (!expresion.test(cedula)) {
-    texto = '<span style="color: #fff; background-color: #e6213f; padding: 3px;border-radius: 3px;">Ingrese solo caracteres válidos (números)</span>';
+    texto = '<span style="color: #e6213f; padding: 3px;border-radius: 3px;>Ingrese solo caracteres válidos (números)</span>';
     document.getElementById('errornit_cedula1').innerHTML = texto;
     return false;
   } else if (cedula.length < 3) {
-    texto = '<span style="color: #fff; background-color: #e6213f; padding: 3px;border-radius: 3px;">Debe ser mayor a 3 caracteres</span>';
+    texto = '<span style="color: #e6213f; padding: 3px;border-radius: 3px;">Debe ser mayor a 3 caracteres</span>';
     document.getElementById('errornit_cedula1').innerHTML = texto;
     return false;
   } else if (cedula.length > 10) {
-    texto = '<span style="color: #fff; background-color: #e6213f; padding: 3px;border-radius: 3px;">Debe ser menor a 10 caracteres</span>';
+    texto = '<span style="color: #e6213f; padding: 3px;border-radius: 3px;">Debe ser menor a 10 caracteres</span>';
     document.getElementById('errornit_cedula1').innerHTML = texto;
     return false;
   
@@ -372,11 +372,11 @@ const validarCorreo1 = () => {
 
   if (!correo) {
     
-      texto = '<span style="color: #fff; background-color: #e6213f; padding: 3px;border-radius: 3px;">El correo no puede estar vacio</span>';
+      texto = '<span style="color: #e6213f; padding: 3px;border-radius: 3px;">El correo no puede estar vacio</span>';
       document.getElementById('errorcorreo1').innerHTML = texto;
       return false;
   } else if (!expresion.test(correo)) {
-      texto = '<span style="color: #fff; background-color: #e6213f; padding: 3px;border-radius: 3px;">La dirección de correo debe ser válida</span>';
+      texto = '<span style="color: #e6213f; padding: 3px;border-radius: 3px;">La dirección de correo debe ser válida</span>';
       document.getElementById('errorcorreo1').innerHTML = texto;
       return false;
   }else {
@@ -393,15 +393,15 @@ const validarTelefono1 = () => {
   let expresion = /^[0-9]+$/;
 
   if (!telefono) {
-      texto = '<span style="color: #fff; background-color: #e6213f; padding: 3px;border-radius: 3px;">El telefono no puede estar vacio</span>';
+      texto = '<span style="color: #e6213f; padding: 3px;border-radius: 3px;>El telefono no puede estar vacio</span>';
       document.getElementById('errortelefono1').innerHTML = texto;
       return false;
   } else if (telefono.length < 10) {
-      texto = '<span style="color: #fff; background-color: #e6213f; padding: 3px;border-radius: 3px;">El numero debe tener mas de 9 digitos</span>';
+      texto = '<span style="color: #e6213f; padding: 3px;border-radius: 3px;">El numero debe tener mas de 9 digitos</span>';
       document.getElementById('errortelefono1').innerHTML = texto;
       return false;
   } else if (!expresion.test(telefono)) {
-      texto = '<span style="color: #fff; background-color: #e6213f; padding: 3px;border-radius: 3px;">Solo se admiten números</span>';
+      texto = '<span style="color: #e6213f; padding: 3px;border-radius: 3px;">Solo se admiten números</span>';
       document.getElementById('errortelefono1').innerHTML = texto;
       return false;
   }else{
