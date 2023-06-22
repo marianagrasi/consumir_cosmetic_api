@@ -1,5 +1,5 @@
 //al desplegar en el servidor colocar la base de datos del servidor 
-const url = 'http://localhost:8086/api/usuario'
+const url = 'https://api-cosmetic-api.onrender.com/api/usuario'
 
 const listarDatos= async()=>{
     let respuesta=''
