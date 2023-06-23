@@ -120,7 +120,7 @@ validarpassword = () => {
     
   
     if ( password === null ||   password=== '' ||  password.length === 0) {
-      texto = '<span style="color: #e6213f; padding: 3px;border-radius: 3px;">Ingrese el nombre del usuario</span>';
+      texto = '<span style="color: #e6213f; padding: 3px;border-radius: 3px;">Ingrese el password del usuario</span>';
       document.getElementById('errorpassword').innerHTML = texto;
       return false;
     } else {
